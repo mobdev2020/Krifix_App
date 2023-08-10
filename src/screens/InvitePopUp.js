@@ -56,7 +56,8 @@ const InvitePopUp = ({isInviteVisible, toggleInvite,referralcode}) => {
 
 
       <Text style={styles.textDesc}>
-        {Translate.t("refer_desc")}
+        {global.referMessage}
+        {/* {Translate.t("refer_desc")} */}
       </Text>
 
       <Pressable

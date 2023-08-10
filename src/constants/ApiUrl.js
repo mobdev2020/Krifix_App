@@ -1,13 +1,13 @@
 
 // ======= dev enviroment=========
-export const BASE_URL = 'https://dev.thewebtual.com/krifixrewards/api/'   
-export const IMAGE_URL = "https://dev.thewebtual.com/krifixrewards/"  
+// export const BASE_URL = 'https://dev.thewebtual.com/krifixrewards/api/'   
+// export const IMAGE_URL = "https://dev.thewebtual.com/krifixrewards/"  
 // ======= dev =========
 
 
 // ======= production enviroment  ========
-// export const BASE_URL = 'https://rewardpanel.krifix.com/api/'  
-// export const IMAGE_URL = "https://rewardpanel.krifix.com/"  
+export const BASE_URL = 'https://rewardpanel.krifix.com/api/'  
+export const IMAGE_URL = "https://rewardpanel.krifix.com/"  
 // ======= production enviroment  ========
 
 export const LOGIN = "auth/login"

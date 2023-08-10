@@ -36,6 +36,7 @@ const RedeemHistory = () => {
       setIsLoading(false)
       var data = response.data
       if (data.status == true) {
+        console.log("data.data.",data.data)
         setHeaderdata(data.data.summary)
         setReddemHistory(data.data.transaction)
         // console.log("DATA REDEEM HISTORY SUCCESSFULLY")
@@ -121,7 +122,7 @@ const RedeemHistory = () => {
                   marginTop: pixelSizeHorizontal(10),
                   justifyContent: "center"
                 }}>
-                <Text style={[styles.textValue, { color: white }]}>{headerData?.total_referral} People </Text>
+                <Text style={[styles.textValue, { color: white }]}>{headerData?.total_referral+"/"+headerData?.available_referral} People </Text>
                 <View onPress={() => navigate("ReferralHistory")}
                   style={{ marginLeft: 6 }}>
 
@@ -163,14 +164,12 @@ const RedeemHistory = () => {
                 <View style={{ flex: 1, marginHorizontal: pixelSizeHorizontal(10) }}>
                   <Text
                     style={[styles.textTitle, { textTransform: "capitalize" }]}>{item?.transaction_title}</Text>
-
                   <Text style={[styles.textDesc, { textTransform: "capitalize" }]}>{Translate.t("redeem_desc", { name: item?.type == "credit" ? "credited" : "debited" })}
                   </Text>
                 </View>
 
                 <View>
                   <Text style={[styles.textTitle, { color: item?.type == "credit" ? greenPrimary : yellow, textAlign: 'right', }]}>{item?.type == "credit" ? "+" : "-"}{item?.reward_sale_point}</Text>
-
                   <Text style={styles.textDate}>
                     {moment(item?.created_at).format("DD MMM YYYY")}
                   </Text>

@@ -14,6 +14,8 @@ import branch from 'react-native-branch';
 import * as Sentry from "@sentry/react-native";
 
 const App = () => {
+
+   global.referMessage = ""
   useEffect(() => {
     try {
       aFunctionThatMightFail();
