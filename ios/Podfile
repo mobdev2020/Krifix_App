@@ -50,7 +50,6 @@ target 'Krifix' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
   pod "react-native-branch", path: "../node_modules/react-native-branch"
-  # pod 'RNSentry', :path => '../node_modules/@sentry/react-native/RNSentry.podspec'
   pod 'RNFBCrashlytics', :path => '../node_modules/@react-native-firebase/crashlytics'
   target 'KrifixTests' do
     inherit! :complete
